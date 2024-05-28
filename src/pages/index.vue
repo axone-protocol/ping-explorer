@@ -44,8 +44,8 @@ function isDarkMode() {
 </script>
 <template>
   <div class="">
-    <div class="flex md:!flex-row flex-col items-center justify-center mb-6 mt-14 gap-2">
-      <div class="">
+    <div class="flex md:!flex-row flex-col items-center justify-center mb-6 mt-14 gap-2" style="margin: -50px 0 -100px 0;">
+      <div class="flex">
         <img v-if="isDarkMode()" class="w-80" src="../assets/logo-axone-dark.svg" />
         <img v-if="!isDarkMode()" class="w-80" src="../assets/logo-axone-white.svg" />
       </div>
