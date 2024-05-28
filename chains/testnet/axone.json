@@ -1,5 +1,5 @@
 {
-    "chain_name": "axone-testnet-1",
+    "chain_name": "Axone testnet",
     "api": ["https://api.testnet.axone.xyz"],
     "rpc": ["https://api.testnet.axone.xyz:443/rpc"],
     "coingecko": "",
@@ -8,13 +8,13 @@
     "coin_type": "118",
     "min_tx_fee": "800",
     "addr_prefix": "axone",
-    "logo": "/logos/axone.png",
+    "logo": "/logos/axone.svg",
     "assets": [
       {
         "base": "uaxone",
         "symbol": "AXONE",
         "exponent": "6",
-        "logo": "/logos/axone.png"
+        "logo": "/logos/axone.svg"
       }
     ]
     }
