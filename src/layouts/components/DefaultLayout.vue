@@ -43,7 +43,6 @@ const changeOpen = (index: Number) => {
     sidebarOpen.value = !sidebarOpen.value;
   }
 };
-const showDiscord = window.location.host.search('ping.pub') > -1;
 
 function isNavGroup(nav: VerticalNavItems | any): nav is NavGroup {
    return (<NavGroup>nav).children !== undefined;
@@ -293,7 +292,7 @@ function isDarkMode() {
         </a>
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
-          href="https://twitter.com/ping_pub"
+          href="https://twitter.com/axonexyz"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
@@ -305,8 +304,7 @@ function isDarkMode() {
           </div>
         </a>
         <a
-          v-if="showDiscord"
-          href="https://discord.com/invite/CmjYVSr6GW"
+          href="https://discord.gg/axone"
           target="_blank"
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
