@@ -1,0 +1,20 @@
+{
+    "chain_name": "OKP4 Drunemeton testnet",
+    "api": [
+        "https://api.drunemeton.okp4.network"
+    ],
+    "rpc": [
+        "https://api.drunemeton.okp4.network:443/rpc"
+    ],
+    "sdk_version": "0.50.1",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "assets": [{
+        "base": "uknow",
+        "symbol": "KNOW",
+        "exponent": "6",
+        "logo": "https://raw.githubusercontent.com/okp4/ui/3351c31e575e1a4763575500b7f3322297d7ef25/src/assets/logos/logotype-okp4-light.svg"
+    }],
+    "addr_prefix": "okp4",
+    "logo": "https://raw.githubusercontent.com/okp4/ui/3351c31e575e1a4763575500b7f3322297d7ef25/src/assets/logos/logotype-okp4-light.svg"
+  }
