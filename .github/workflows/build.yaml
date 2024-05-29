@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-yarn:
+  build:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out repository
@@ -27,12 +27,6 @@ jobs:
       - name: Build project
         run: |
           yarn build
-
-  build-docker:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
 
       - name: Build docker image
         run: |
