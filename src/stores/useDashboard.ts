@@ -268,7 +268,7 @@ export const useDashboard = defineStore('dashboard', {
     return {
       status: LoadingStatus.Empty,
       source: ConfigSource.MainnetCosmosDirectory,
-      networkType: NetworkType.Testnet,
+      networkType: NetworkType.Mainnet,
       favoriteMap: favMap as Record<string, boolean>,
       chains: {} as Record<string, ChainConfig>,
       prices: {} as Record<string, any>,
@@ -321,16 +321,20 @@ export const useDashboard = defineStore('dashboard', {
       }
     },
     async loadingFromLocal() {
-      // if(window.location.hostname.search("testnet") > -1) {
-      //   this.networkType = NetworkType.Testnet
-      // }
-      const source: Record<string, LocalConfig> =
-        this.networkType === NetworkType.Mainnet
-          ? import.meta.glob('../../chains/mainnet/*.json', { eager: true })
-          : import.meta.glob('../../chains/testnet/*.json', { eager: true });
-      Object.values<LocalConfig>(source).forEach((x: LocalConfig) => {
+      // Load both mainnet and testnet local configs and merge them.
+      const mainnetSource: Record<string, LocalConfig> = import.meta.glob('../../chains/mainnet/*.json', { eager: true });
+      const testnetSource: Record<string, LocalConfig> = import.meta.glob('../../chains/testnet/*.json', { eager: true });
+
+      Object.values<LocalConfig>(mainnetSource).forEach((x: LocalConfig) => {
         this.chains[x.chain_name] = fromLocal(x);
       });
+      Object.values<LocalConfig>(testnetSource).forEach((x: LocalConfig) => {
+        // Avoid overwriting mainnet entries if names collide; prefer mainnet by default.
+        if (!this.chains[x.chain_name]) {
+          this.chains[x.chain_name] = fromLocal(x);
+        }
+      });
+
       this.setupDefault();
       this.status = LoadingStatus.Loaded;
     },
