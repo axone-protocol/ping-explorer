@@ -1,0 +1,30 @@
+{
+  "chain_name": "AXONE-MAINNET",
+  "api": [
+    "https://api.axone.cumulo.com.es",
+    "https://axone.lcd.bccnodes.com",
+    "https://axone-api.highstakes.ch",
+    "https://api.axone.nodestake.org"
+  ],
+  "rpc": [
+    "https://rpc.axone.cumulo.com.es",
+    "https://axone.rpc.bccnodes.com",
+    "https://axone-rpc.highstakes.ch",
+    "https://rpc.axone.nodestake.org"
+  ],
+  "coingecko": "",
+  "snapshot_provider": "",
+  "sdk_version": "0.50.13",
+  "coin_type": "118",
+  "min_tx_fee": "800",
+  "addr_prefix": "axone",
+  "logo": "/logos/axone.svg",
+  "assets": [
+    {
+      "base": "uaxone",
+      "symbol": "AXONE",
+      "exponent": "6",
+      "logo": "/logos/axone.svg"
+    }
+  ]
+}
