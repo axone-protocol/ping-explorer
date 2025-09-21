@@ -1,20 +1,20 @@
 {
-    "chain_name": "Axone testnet",
-    "api": ["https://api.dentrite.axone.xyz"],
-    "rpc": ["https://api.dentrite.axone.xyz:443/rpc"],
-    "coingecko": "",
-    "snapshot_provider": "",
-    "sdk_version": "0.50.9",
-    "coin_type": "118",
-    "min_tx_fee": "800",
-    "addr_prefix": "axone",
-    "logo": "/logos/axone.svg",
-    "assets": [
-      {
-        "base": "uaxone",
-        "symbol": "AXONE",
-        "exponent": "6",
-        "logo": "/logos/axone.svg"
-      }
-    ]
+  "chain_name": "AXONE-TESTNET",
+  "api": ["https://axone-test.api.cumulo.com.es"],
+  "rpc": ["https://axone-test.rpc.cumulo.com.es"],
+  "coingecko": "",
+  "snapshot_provider": "",
+  "sdk_version": "0.50.13",
+  "coin_type": "118",
+  "min_tx_fee": "800",
+  "addr_prefix": "axone",
+  "logo": "/logos/axone.svg",
+  "assets": [
+    {
+      "base": "uaxone",
+      "symbol": "AXONE",
+      "exponent": "6",
+      "logo": "/logos/axone.svg"
     }
+  ]
+}
